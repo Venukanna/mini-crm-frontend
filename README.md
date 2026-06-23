@@ -1,16 +1,91 @@
-# React + Vite
+# Mini CRM Opportunity Tracker - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based CRM application that allows authenticated users to manage opportunities in a shared sales pipeline.
 
-Currently, two official plugins are available:
+## Live Application
+https://mini-crm-frontend-azure.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## GitHub Repository
+https://github.com/Venukanna/mini-crm-frontend
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+### Authentication
+- User Registration
+- User Login
+- JWT-based session management
+- Protected Routes
+- Automatic logout on invalid token
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Opportunity Management
+- Create Opportunity
+- Edit Opportunity
+- Delete Opportunity
+- Shared Opportunity Dashboard
+
+### Dashboard Analytics
+- Total Opportunities
+- Total Employees
+- My Opportunities
+- Won Deals
+- Opportunities grouped by employee
+
+### Authorization UI
+- All users can view opportunities.
+- Edit and Delete buttons are visible only to the opportunity owner.
+
+### User Experience
+- Responsive Dashboard
+- Reusable Components
+- Clean UI Design
+- Route Protection
+- Persistent Login using Local Storage
+
+---
+
+## Tech Stack
+
+- React
+- Vite
+- React Router DOM
+- Axios
+- CSS
+- Vercel (Deployment)
+
+---
+
+## Project Structure
+
+src/
+├── assets/
+├── components/
+│ ├── Navbar.jsx
+│ ├── OpportunityCard.jsx
+│ └── ProtectedRoute.jsx
+├── context/
+│ └── AuthContext.jsx
+├── pages/
+│ ├── Dashboard.jsx
+│ ├── Login.jsx
+│ ├── Register.jsx
+│ └── OpportunityForm.jsx
+├── services/
+│ ├── api.js
+│ ├── authService.js
+│ └── opportunityService.js
+├── App.jsx
+├── App.css
+├── styles.css
+└── main.jsx
+
+---
+
+## Environment Variables
+
+Create a `.env` file:
+
+```env
+VITE_API_BASE_URL=https://mini-crm-backend-is3s.onrender.com/api
+```
