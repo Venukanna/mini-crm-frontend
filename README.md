@@ -147,4 +147,4 @@ https://mini-crm-frontend-azure.vercel.app
 
 ## Author
 
-Venu Kanna
+Venu Babu Banala
